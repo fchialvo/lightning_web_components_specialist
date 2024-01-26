@@ -3,6 +3,7 @@ import getAllReviews from "@salesforce/apex/BoatDataService.getAllReviews";
 import { NavigationMixin } from "lightning/navigation";
 export default class BoatReviews extends NavigationMixin(LightningElement){
     // Private
+    @api
     boatId;
     error;
     boatReviews;
@@ -63,6 +64,6 @@ export default class BoatReviews extends NavigationMixin(LightningElement){
                 actionName: 'view',
             },
         });
-     }
+    }
   }
   
