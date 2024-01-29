@@ -3,7 +3,7 @@ import getBoats from "@salesforce/apex/BoatDataService.getBoats";
 import updateBoatList from "@salesforce/apex/BoatDataService.updateBoatList";
 import { api, wire , LightningElement, track} from "lwc";
 import {refreshApex} from '@salesforce/apex';
-import BOATMC from '@salesforce/messageChannel/boatMessageChannel__c';
+import BOATMC from '@salesforce/messageChannel/BoatMessageChannel__c';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent'
 
 

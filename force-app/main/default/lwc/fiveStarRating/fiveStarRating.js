@@ -3,6 +3,7 @@ import fivestar from "@salesforce/resourceUrl/fivestar";
 import { loadStyle, loadScript } from 'lightning/platformResourceLoader';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import { api } from "lwc";
+import { LightningElement } from "lwc";
 
 
 const ERROR_TITLE = 'Error loading five-star';

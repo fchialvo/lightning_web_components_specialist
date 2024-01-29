@@ -1,14 +1,13 @@
 import {
   subscribe,
-  unsubscribe,
   APPLICATION_SCOPE,
   MessageContext,
-} from "lightning/messageService";
-import { getRecord, getFieldValue } from "lightning/uiRecordApi";
+} from 'lightning/messageService';
+import { getRecord} from "lightning/uiRecordApi";
 
-import BOATMC from '@salesforce/messageChannel/boatMessageChannel__c'
-import { LightningElement, api, wire } from "lwc";
-
+import BOATMC from '@salesforce/messageChannel/BoatMessageChannel__c'
+import { LightningElement } from 'lwc';
+import { api, wire } from 'lwc';
 const LONGITUDE_FIELD = "Boat__c.Geolocation__Longitude__s";
 // Declare the const LATITUDE_FIELD for the boat's Latitude
 const LATITUDE_FIELD = "Boat__c.Geolocation__Latitude__s";
@@ -65,10 +64,10 @@ export default class BoatMap extends LightningElement {
     }
     // Subscribe to the message channel to retrieve the recordId and explicitly assign it to boatId.
     this.subscription = subscribe(
-      this.messageContext,
+      this.MessageContext,
       BOATMC,
-      (message) => this.boatId = message.recordId,
-      { scope: APPLICATION_SCOPE },
+      (message) => {this.boatId = message.recordId},
+      { scope: APPLICATION_SCOPE }
     );
   }
 

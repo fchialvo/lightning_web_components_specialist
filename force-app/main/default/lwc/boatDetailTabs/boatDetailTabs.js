@@ -1,4 +1,5 @@
-import { LightningElement , wire } from "lwc";
+import { LightningElement } from "lwc";
+import { wire } from "lwc";
 // Custom Labels Imports
 import labelDetails from "@salesforce/label/c.Details";
 import labelReviews from "@salesforce/label/c.Reviews";
@@ -13,12 +14,14 @@ import BOAT_NAME_FIELD from '@salesforce/schema/Boat__c.Name'
 import { getRecord } from "lightning/uiRecordApi";
 import { getFieldValue } from "lightning/uiRecordApi";
 
-import BOATMC from '@salesforce/messageChannel/boatMessageChannel__c'
+import BOATMC from '@salesforce/messageChannel/BoatMessageChannel__c'
 import {
     subscribe,
     APPLICATION_SCOPE,
     MessageContext,
 } from "lightning/messageService";
+
+import { NavigationMixin } from "lightning/navigation";
 
 
 const BOAT_FIELDS = [BOAT_ID_FIELD, BOAT_NAME_FIELD];
